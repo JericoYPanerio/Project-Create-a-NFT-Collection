@@ -1,0 +1,30 @@
+function printNFTMetadata(name, eyeColor, shirtType, bling) {
+    console.log("Name: " + name);
+    console.log("Eye Color: " + eyeColor);
+    console.log("Shirt Type: " + shirtType);
+    console.log("Bling: " + bling);
+}
+
+// Define an array of NFTs
+let NFTs = [
+    { name: "Jerico", eyeColor: "Blue", shirtType: "T-shirt", bling: "Gold chain" },
+    { name: "Panerio", eyeColor: "Blue", shirtType: "Hoodie", bling: "Gold necklace" },
+    // Add more NFTs as needed
+];
+
+// Define a function to list all NFTs and their metadata
+function listNFTs() {
+    for(let i = 0; i < NFTs.length; i++) {
+        console.log("NFT " + (i+1) + " Metadata:");
+        printNFTMetadata(NFTs[i].name, NFTs[i].eyeColor, NFTs[i].shirtType, NFTs[i].bling);
+    }
+}
+
+// Define a function to get the total supply of NFTs
+function getTotalSupply() {
+    console.log("Total NFTs: " + NFTs.length);
+}
+
+// Call functions
+listNFTs();
+getTotalSupply();
