@@ -1,30 +1,42 @@
-function printNFTMetadata(name, eyeColor, shirtType, bling) {
-    console.log("Name: " + name);
-    console.log("Eye Color: " + eyeColor);
-    console.log("Shirt Type: " + shirtType);
-    console.log("Bling: " + bling);
+let numberOfNFT = 0;
+
+//Define a function of metadata of an NFT function
+
+function printNFTMetadata(name,eyeColor,shirtType,bling)
+{
+    console.log("eye color: "+eyeColor);
+    console.log("shirt type: " +shirtType);
+    console.log("Bling: "+bling);
 }
 
-// Define an array of NFTs
-let NFTs = [
-    { name: "Jerico", eyeColor: "Blue", shirtType: "T-shirt", bling: "Gold chain" },
-    { name: "Panerio", eyeColor: "Blue", shirtType: "Hoodie", bling: "Gold necklace" },
-    // Add more NFTs as needed
-];
+//define an array of ntfs
 
-// Define a function to list all NFTs and their metadata
-function listNFTs() {
-    for(let i = 0; i < NFTs.length; i++) {
-        console.log("NFT " + (i+1) + " Metadata:");
-        printNFTMetadata(NFTs[i].name, NFTs[i].eyeColor, NFTs[i].shirtType, NFTs[i].bling);
+let NFTs =[
+    { name: "Jerico",eyeColor: "Blue", shirtType: "T-shirt", bling: "Gold Chain"},
+    { name: "Panerio", eyeColor: "Black", shirtType: "Hoodie",bling: "Gold Chain"},
+    
+    //you can add more NFTs as you wanted
+    
+    ];
+    
+    //define a function to list
+    
+    function listNFTs(){
+        for (let i = 0;i<NFTs.length;i++){
+            console.log("NFT"+(i+1)+"Metadata:");
+            
+            printNFTMetadata(NFTs[i].name,NFTs[i].eyeColor,NFTs[i].shirtType,NFTs[i].bling);
+        }
     }
-}
-
-// Define a function to get the total supply of NFTs
-function getTotalSupply() {
-    console.log("Total NFTs: " + NFTs.length);
-}
-
-// Call functions
+    
+    //define a function to get the total NFTs
+    
+    function getTotalSupply(){
+        console.log("total NFTs: "+NFTs.length);
+        
+    }
+    
+    //this will call the fuctions
 listNFTs();
 getTotalSupply();
+    
